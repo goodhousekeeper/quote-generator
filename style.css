@@ -17,7 +17,7 @@ body {
 }
 .quote-container {
     width: auto;
-    max-width: 900px;
+    max-width: 960px;
     padding: 24px 32px;
     border-radius: 16px;
     background-color: #FFF;
@@ -83,13 +83,13 @@ button:active {
 }
 
 /* Media Query: Tablet */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 960px) {
     .quote-container {
         margin: auto 12px;
     }
 
     .fa-quote-left {
-        font-size: 3.0rem; 
+        font-size: 2.5rem; 
     }
 
     .quote-text {
