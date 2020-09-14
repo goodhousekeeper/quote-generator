@@ -62,16 +62,13 @@ button {
     background: #333;
     outline: none;
     padding: 0.5rem 2.0rem;
-    box-shadow: 0 0.25rem rgba(121,121,121, 0.75);
+    box-shadow: 0 0.125rem 0.25rem hsla(0, 0%, 0%, 0.24);
 }
 
-button:hover {
-    filter: brightness(110%)
-}
 
 button:active {
-    transform: translate(0, 0.3rem);
-    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+    transform: translate(0, 0.125rem);
+    box-shadow: none;
 }
 
 .twitter-button:hover {
