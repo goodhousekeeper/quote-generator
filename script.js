@@ -8,10 +8,12 @@ const quoteMark = document.getElementById("quote-mark");
 const quoteText = document.getElementById("quote");
 const quoteAuthor = document.getElementById("author");
 const newQuoteBtn = document.getElementById("new-quote");
+const languageSwitch = document.getElementById("myonoffswitch");
 const loader = document.getElementById("loader");
 const maxQuoteLength = 120;
 const longQuoteClass = "long-quote";
 const longQuoteMarkClass = "long-quote-mark";
+let apiLanguageSelector = "en";
 
 function quoteLoading() {
     loader.hidden = false;
@@ -25,9 +27,22 @@ function quoteLoaded() {
     }
 }
 
+function changeLanguage() {
+    if (languageSwitch.checked) {
+        /* English enabled */
+        newQuoteBtn.innerText = "New Quote";
+        apiLanguageSelector = "en";
+    } else {
+        /* Russian enabled */
+        newQuoteBtn.innerText = "Ещё цитата";
+        apiLanguageSelector = "ru";
+    }
+    getQuote();
+}
+
 function getQuote() {
     const proxyURL = "https://cors-anywhere.herokuapp.com/";
-    const apiURL = "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json";
+    const apiURL = `https://api.forismatic.com/api/1.0/?method=getQuote&lang=${apiLanguageSelector}&format=json`;
     quoteLoading();
     fetch(proxyURL + apiURL)
         .then(function(response) {
@@ -51,7 +66,9 @@ function getQuote() {
         });
 }
 
+/* Set up event listeners */
 newQuoteBtn.addEventListener("click", getQuote);
+languageSwitch.addEventListener("change", changeLanguage)
 
-
-//newQuoteBtn.click();
+/* Get first quote */
+newQuoteBtn.click();
