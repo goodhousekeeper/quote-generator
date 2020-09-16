@@ -65,7 +65,7 @@ button {
     background-color: hsl(209, 61%, 16%);
     outline: none;
     padding: 0.5rem 2.0rem;
-    box-shadow: 0 0.125rem 0.25rem hsla(209, 61%, 16%, 0.24);
+    box-shadow: 0.125rem 0.125rem 0.25rem hsl(209, 28%, 39%), inset 0.125rem 0.125rem 0.25rem hsl(210, 22%, 49%);
 }
 
 button:hover {
@@ -75,7 +75,7 @@ button:hover {
 }
 
 button:active {
-    transform: translate(0, 0.125rem);
+    transform: translate(0.125rem, 0.125rem);
     box-shadow: none;
 }
 
