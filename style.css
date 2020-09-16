@@ -79,6 +79,68 @@ button:active {
     box-shadow: none;
 }
 
+.onoffswitch {
+    text-align: left;
+    position: relative; width: 100px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid;
+    border-top-color: hsl(209, 61%, 16%); 
+    border-left-color: hsl(209, 61%, 16%); 
+    border-right-color: hsl(210, 22%, 49%); 
+    border-bottom-color: hsl(210, 22%, 49%); 
+    border-radius: 8px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 48px; padding: 0; line-height: 48px;
+    font-size: 24px; color: white; font-family:  'Ubuntu', sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "EN";
+    padding-left: 10px;
+    background-color: #334E68; 
+    color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "RU";
+    padding-right: 10px;
+    background-color: #334E68; 
+    color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 42px; margin: 3px;
+    background:hsl(210, 31%, 80%);
+    position: absolute; top: 0; bottom: 0;
+    right: 48px;
+    border: 2px solid;
+    border-left-color: hsl(212, 33%, 89%);
+    border-top-color: hsl(212, 33%, 89%);
+    border-right-color:hsl(209, 23%, 60%);
+    border-bottom-color: hsl(209, 23%, 60%);
+    border-radius: 8px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
 .fa-twitter {
     font-size: 1.5rem;
 }
