@@ -62,4 +62,4 @@ function tweetQuote() {
 newQuoteBtn.addEventListener("click", getQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 
-newQuoteBtn.click();
+//newQuoteBtn.click();

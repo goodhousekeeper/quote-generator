@@ -81,56 +81,68 @@ button:active {
 
 .onoffswitch {
     text-align: left;
-    position: relative; width: 100px;
+    position: relative; width: 96px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
+
 .onoffswitch-checkbox {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 .onoffswitch-label {
-    display: block; overflow: hidden; 
+    display: block; 
+    overflow: hidden; 
     cursor: pointer;
-    border: 2px solid;
-    border-top-color: hsl(209, 61%, 16%); 
-    border-left-color: hsl(209, 61%, 16%); 
-    border-right-color: hsl(210, 22%, 49%); 
-    border-bottom-color: hsl(210, 22%, 49%); 
+    border: 2px solid hsl(209, 61%, 16%);;
+    border-right-color: hsl(209, 28%, 39%); 
+    border-bottom-color:hsl(209, 28%, 39%);
     border-radius: 8px;
 }
+
 .onoffswitch-inner {
-    display: block; width: 200%; margin-left: -100%;
+    display: block; 
+    width: 200%; 
+    margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 48px; padding: 0; line-height: 48px;
-    font-size: 24px; color: white; font-family:  'Ubuntu', sans-serif; font-weight: bold;
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 48px; 
+    padding: 0; 
+    line-height: 48px;
+    font-size: 24px; 
+    font-family:  'Ubuntu', sans-serif; 
     box-sizing: border-box;
+    color: hsl(185, 94%, 87%);     
+    background-color: hsl(209, 61%, 16%);
 }
+
+.onoffswitch-label:hover .onoffswitch-inner:before, 
+.onoffswitch-label:hover .onoffswitch-inner:after {
+    color: hsl(186, 100%, 94%);
+    background-color: hsl(211, 39%, 23%);
+}
+
 .onoffswitch-inner:before {
-    content: "EN";
+    content: "En";
     padding-left: 10px;
-    background-color: #334E68; 
-    color: #FFFFFF;
 }
 .onoffswitch-inner:after {
-    content: "RU";
+    content: "Ru";
     padding-right: 10px;
-    background-color: #334E68; 
-    color: #FFFFFF;
     text-align: right;
 }
+
 .onoffswitch-switch {
     display: block; width: 42px; margin: 3px;
     background:hsl(210, 31%, 80%);
     position: absolute; top: 0; bottom: 0;
     right: 48px;
-    border: 2px solid;
-    border-left-color: hsl(212, 33%, 89%);
-    border-top-color: hsl(212, 33%, 89%);
-    border-right-color:hsl(209, 23%, 60%);
-    border-bottom-color: hsl(209, 23%, 60%);
+    box-shadow: inset 0.125rem 0.125rem 0.125rem hsl(212, 33%, 89%), 
+                inset -0.125rem -0.125rem 0.125rem  hsl(209, 23%, 60%);
     border-radius: 8px;
     transition: all 0.3s ease-in 0s; 
 }
