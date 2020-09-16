@@ -7,7 +7,6 @@ const quoteContainer = document.getElementById("quote-container");
 const quoteMark = document.getElementById("quote-mark");
 const quoteText = document.getElementById("quote");
 const quoteAuthor = document.getElementById("author");
-const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
 const loader = document.getElementById("loader");
 const maxQuoteLength = 120;
@@ -52,14 +51,7 @@ function getQuote() {
         });
 }
 
-function tweetQuote() {
-    const quote = quoteText.innerText;
-    const author = quoteAuthor.innerText;
-    const twitterURL = `https://twitter.com/intent/tweet?text=${quote} - ${author}`;
-    window.open(twitterURL, "_blank");
-}
-
 newQuoteBtn.addEventListener("click", getQuote);
-twitterBtn.addEventListener("click", tweetQuote);
+
 
 //newQuoteBtn.click();

@@ -81,7 +81,7 @@ button:active {
 
 .onoffswitch {
     text-align: left;
-    position: relative; width: 96px;
+    position: relative; width: 6rem;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 
@@ -110,10 +110,10 @@ button:active {
     display: block; 
     float: left; 
     width: 50%; 
-    height: 48px; 
+    height: 3rem; 
     padding: 0; 
-    line-height: 48px;
-    font-size: 24px; 
+    line-height: 3rem;
+    font-size: 1.5rem; 
     font-family:  'Ubuntu', sans-serif; 
     box-sizing: border-box;
     color: hsl(185, 94%, 87%);     
@@ -151,10 +151,6 @@ button:active {
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
-}
-
-.fa-twitter {
-    font-size: 1.5rem;
 }
 
 .loader {
