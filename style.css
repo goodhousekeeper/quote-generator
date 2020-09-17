@@ -221,9 +221,9 @@ button:active {
 
 @media screen and (max-width: 360px) {
     .en-lang #new-quote::after {
-        content: "New..."
+        content: "New"
     }
     .ru-lang #new-quote::after {
-        content: "Ещё..."
+        content: "Ещё"
     }    
 }
