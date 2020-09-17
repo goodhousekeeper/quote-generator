@@ -30,8 +30,16 @@ body {
     content: "New quote";
 }
 
+.en-lang #error-message::after {
+    content: "Looks like we're out of quotes... Why don't you come back later?";
+}
+
 .ru-lang #new-quote::after {
     content: "Ещё цитата";
+}
+
+.ru-lang #error-message::after {
+    content: "Похоже, у нас закончились цитаты... Может, заглянете попозже?";
 }
 
 .quote-text {
@@ -56,6 +64,14 @@ body {
     font-size: 2rem;
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
+}
+
+.error-message {
+    margin-top: 16px;
+    font-size: 1.0rem;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(330, 63%, 47%);
 }
 
 .button-container {
