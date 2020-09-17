@@ -15,6 +15,9 @@ const longQuoteClass = "long-quote";
 const longQuoteMarkClass = "long-quote-mark";
 let apiLanguageSelector = "en";
 
+
+loader.hidden = true; 
+
 function quoteLoading() {
     loader.hidden = false;
     quoteContainer.hidden = true;
@@ -30,14 +33,15 @@ function quoteLoaded() {
 function changeLanguage() {
     if (languageSwitch.checked) {
         /* English enabled */
-        newQuoteBtn.innerText = "New Quote";
         apiLanguageSelector = "en";
+        quoteContainer.classList.add("en-lang");
+        quoteContainer.classList.remove("ru-lang");
     } else {
         /* Russian enabled */
-        newQuoteBtn.innerText = "Ещё цитата";
         apiLanguageSelector = "ru";
+        quoteContainer.classList.remove("en-lang");
+        quoteContainer.classList.add("ru-lang");        
     }
-    getQuote();
 }
 
 function getQuote() {
@@ -71,4 +75,4 @@ newQuoteBtn.addEventListener("click", getQuote);
 languageSwitch.addEventListener("change", changeLanguage)
 
 /* Get first quote */
-newQuoteBtn.click();
+//newQuoteBtn.click();
