@@ -13,10 +13,14 @@ const loader = document.getElementById("loader");
 const maxQuoteLength = 120;
 const longQuoteClass = "long-quote";
 const longQuoteMarkClass = "long-quote-mark";
+const errorMessage = document.getElementById("error-message");
 let apiLanguageSelector = "en";
+const errorCounterMax = 10;
+let errorCounter = 0;
 
 
 loader.hidden = true; 
+errorMessage.hidden = true;
 
 function quoteLoading() {
     loader.hidden = false;
@@ -62,11 +66,19 @@ function getQuote() {
                 quoteMark.classList.remove(longQuoteMarkClass);
                 quoteText.classList.remove(longQuoteClass);
             }
+            errorCounter = 0;
+            errorMessage.hidden = true;
             quoteLoaded();
          })        
         .catch(function(error) {
-            console.info("Something goes wrong...", error, ". Retry");
-            //getQuote();
+            errorCounter +=1;
+            if (errorCounter > errorCounterMax) {
+                errorCounter = 0;
+                errorMessage.hidden = false;
+                quoteLoaded();
+            } else {
+                getQuote();
+            }
         });
 }
 
@@ -75,4 +87,4 @@ newQuoteBtn.addEventListener("click", getQuote);
 languageSwitch.addEventListener("change", changeLanguage)
 
 /* Get first quote */
-//newQuoteBtn.click();
+newQuoteBtn.click();
