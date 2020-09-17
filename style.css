@@ -218,3 +218,12 @@ button:active {
         padding: 0.25rem 1.0rem;
     }
 }
+
+@media screen and (max-width: 360px) {
+    .en-lang #new-quote::after {
+        content: "New..."
+    }
+    .ru-lang #new-quote::after {
+        content: "Ещё..."
+    }    
+}
