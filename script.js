@@ -1,6 +1,5 @@
-
 /*
-Get a quote via forismatic API - https://forismatic.com/en/api/
+Get a quote via API - https://forismatic.com/en/api/
 */
 
 const quoteContainer = document.getElementById("quote-container");
@@ -22,12 +21,12 @@ let errorCounter = 0;
 loader.hidden = true; 
 errorMessage.hidden = true;
 
-function quoteLoading() {
+function showLoader() {
     loader.hidden = false;
     quoteContainer.hidden = true;
 }
 
-function quoteLoaded() {
+function hideLoader() {
     if (!loader.hidden) {
         quoteContainer.hidden = false;
         loader.hidden = true;
@@ -51,12 +50,14 @@ function changeLanguage() {
 function getQuote() {
     const proxyURL = "https://wg-cors-anywhere.herokuapp.com/";
     const apiURL = `https://api.forismatic.com/api/1.0/?method=getQuote&lang=${apiLanguageSelector}&format=json`;
-    quoteLoading();
+    showLoader();
     fetch(proxyURL + apiURL)
         .then(function(response) {
            return response.json();
         })
         .then(function(data) {
+            /** @namespace data.quoteText **/
+            /** @namespace data.quoteAuthor **/
             quoteText.innerText = data.quoteText;
             quoteAuthor.innerText = data.quoteAuthor;
             if (data.quoteAuthor === "") {
@@ -73,14 +74,14 @@ function getQuote() {
             }
             errorCounter = 0;
             errorMessage.hidden = true;
-            quoteLoaded();
+            hideLoader();
          })        
-        .catch(function(error) {
+        .catch(function() {
             errorCounter +=1;
             if (errorCounter > errorCounterMax) {
                 errorCounter = 0;
                 errorMessage.hidden = false;
-                quoteLoaded();
+                hideLoader();
             } else {
                 getQuote();
             }

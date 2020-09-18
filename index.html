@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Quote Generator</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <div class="quote-container en-lang" id="quote-container">
@@ -25,7 +25,7 @@
      
       <!-- Language Switcher -->
       <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+        <input checked class="onoffswitch-checkbox" id="myonoffswitch" name="onoffswitch" tabindex="0" type="checkbox">
         <label class="onoffswitch-label" for="myonoffswitch">
           <span class="onoffswitch-inner"></span>
           <span class="onoffswitch-switch"></span>
@@ -40,7 +40,6 @@
     <div id="error-message"></div>
 
     </div>
-  </div> 
   <!-- Loader -->
   <div class="loader" id="loader"></div>
   <!-- Script -->
