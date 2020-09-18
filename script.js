@@ -49,7 +49,7 @@ function changeLanguage() {
 }
 
 function getQuote() {
-    const proxyURL = "https://cors-anywhere.herokuapp.com/";
+    const proxyURL = "https://wg-cors-anywhere.herokuapp.com/";
     const apiURL = `https://api.forismatic.com/api/1.0/?method=getQuote&lang=${apiLanguageSelector}&format=json`;
     quoteLoading();
     fetch(proxyURL + apiURL)
