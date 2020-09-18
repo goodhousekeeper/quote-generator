@@ -58,7 +58,12 @@ function getQuote() {
         })
         .then(function(data) {
             quoteText.innerText = data.quoteText;
-            quoteAuthor.innerText = data.quoteAuthor === "" ? "Unknown" : data.quoteAuthor;
+            quoteAuthor.innerText = data.quoteAuthor;
+            if (data.quoteAuthor === "") {
+                quoteAuthor.classList.add("unknown");
+            } else {
+                quoteAuthor.classList.remove("unknown");
+            }
             if (data.quoteText.length > maxQuoteLength) {
                 quoteMark.classList.add(longQuoteMarkClass);
                 quoteText.classList.add(longQuoteClass);

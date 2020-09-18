@@ -34,12 +34,20 @@ body {
     content: "Looks like we're out of quotes... Why don't you come back later?";
 }
 
+.en-lang #author.unknown::after {
+    content: "Unknown";
+}
+
 .ru-lang #new-quote::after {
     content: "Ещё цитата";
 }
 
 .ru-lang #error-message::after {
     content: "Похоже, у нас закончились цитаты... Может, заглянете попозже?";
+}
+
+.ru-lang #author.unknown::after {
+    content: "Источник неизвестен";
 }
 
 .quote-text {
