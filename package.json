@@ -5,6 +5,7 @@
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel": "^1.12.4",
     "parcel-plugin-nuke-dist": "^1.0.1"
   }
 }
