@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a7e5b05a-70cc-4914-996f-472008991ebc/deploy-status)](https://app.netlify.com/sites/wg-quote-generator/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b4697ae5-74f6-41cf-8cfd-aeacd14afe4b/deploy-status)](https://app.netlify.com/sites/wg-quote-generator/deploys)
 # Quote Generator
 ## A small app for inspiration for every day
 ### Features:
