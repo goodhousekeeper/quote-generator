@@ -13,13 +13,10 @@ const maxQuoteLength = 120;
 const longQuoteClass = "long-quote";
 const longQuoteMarkClass = "long-quote-mark";
 const errorMessage = document.getElementById("error-message");
-let apiLanguageSelector = "en";
 const errorCounterMax = 10;
+
 let errorCounter = 0;
-
-
-loader.hidden = true; 
-errorMessage.hidden = true;
+let apiLanguageSelector = "en";
 
 function showLoader() {
     loader.hidden = false;
