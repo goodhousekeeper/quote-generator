@@ -3,8 +3,9 @@
 ## A small app for inspiration for every day
 ### Features:
 
-- Assembled and hosted on [Netlify](https"//netlify.com)
-- Use [Forismatic](https://forismatic.com/) REST API to get a new quote.
-- Eliminate [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) issue by using custom proxy-server.
-- A bilingual interface (EN/RU) with switcher
-- Responsive layout
+- Uses [Forismatic](https://forismatic.com/) REST API to get a new quote.
+- Eliminates [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) issue by using custom proxy-server.
+- Prepares final build with [Parcel](https://parceljs.org/).
+- Assembled and hosted on [Netlify](https://netlify.com/).
+- Has a bilingual interface (EN/RU) with switcher.
+- Has a responsive layout.
