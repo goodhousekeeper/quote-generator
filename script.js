@@ -45,10 +45,9 @@ function changeLanguage() {
 }
 
 function getQuote() {
-    const proxyURL = "https://wg-cors-anywhere.herokuapp.com/";
-    const apiURL = `https://api.forismatic.com/api/1.0/?method=getQuote&lang=${apiLanguageSelector}&format=json`;
+    const apiURL = `https://api.webgarage.dev/quotes/get/${apiLanguageSelector}`;
     showLoader();
-    fetch(proxyURL + apiURL)
+    fetch(apiURL)
         .then(function(response) {
            return response.json();
         })
