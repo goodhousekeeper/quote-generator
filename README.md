@@ -6,4 +6,4 @@
 - Eliminates [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) issue by using custom proxy-server.
 - Prepares final build with [Parcel](https://parceljs.org/).
 - Has a bilingual interface (EN/RU) with switcher.
-- Has a responsive layout.......
+- Has a responsive layout.
